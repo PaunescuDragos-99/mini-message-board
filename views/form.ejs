@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/stylesheets/form.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <form action="/new" method="POST">
+      <label for="author">Your name</label>
+      <input type="text" name="authorName" required />
+      <label for="message">Your message</label>
+      <textarea name="messageText" rows="6" required></textarea>
+      <button type="submit">Submit</button>
+      <a href="/">Back</a>
+    </form>
+  </body>
+</html>

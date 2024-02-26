@@ -1,11 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+    <div class="container">
+      <a href="/new" class="new-message-link">New message!</a>
+      <p>Welcome to <%= title %></p>
+      <div class="content">
+          <% messages.forEach((item) => { %>
+            <div class="message">
+              <h2><%=item.text%></h2>
+              <p><%=item.user%></p>
+              <p class="meta"><%=item.added%></p>
+              <br>
+            </div>
+          <% }); %>
+      </div>
+    </div>
   </body>
 </html>
